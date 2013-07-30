@@ -12,7 +12,7 @@ public class Dialog {
 	}
 
 	public byte getFromConsoleInputType(byte minTypeOfGame, byte maxTypeOfGame) {
-		System.out.println("\nViberite rezhim: 1. Random vs Random. 2. Person vs Random. 3. Person vs Person ");
+		System.out.println("\nViberite rezhim: 1. Random vs Random. 2. Person vs Computer. 3. Person vs Person ");
 		return getVulnFromConsole(minTypeOfGame, maxTypeOfGame);
 	}
 	
