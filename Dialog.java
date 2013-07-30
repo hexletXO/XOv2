@@ -6,7 +6,7 @@ public class Dialog {
 
 	private static Scanner scanner;
 
-	public static byte getFromConsoleSizeOfArr(byte minSizeOfArr, byte maxSizeOfArr, byte defSizeOfArr) {
+	public static byte getFromConsoleSizeOfArr(byte minSizeOfArr, byte maxSizeOfArr) {
 		return getVulnFromConsole(minSizeOfArr, maxSizeOfArr, "\nVvedite razmer polya, ot " + minSizeOfArr + " do " + maxSizeOfArr + ":");
 	}
 

@@ -6,8 +6,6 @@ public class Main {
 
 	private static final byte MINSIZEOFARR = 3;
 	
-	private static final byte DEFSIZEOFARR = 3;
-	
 	private final static byte CLEARARRBYZERO = 0;
 	
 	private static byte MINTYPEOFGAME = 1;
@@ -24,7 +22,7 @@ public class Main {
 
 		Dialog gameDialog = new Dialog();
 
-		Field gameField = new Field(Dialog.getFromConsoleSizeOfArr(MINSIZEOFARR, MAXSIZEOFARR, DEFSIZEOFARR));
+		Field gameField = new Field(Dialog.getFromConsoleSizeOfArr(MINSIZEOFARR, MAXSIZEOFARR));
 
 		inputType = gameDialog.getFromConsoleInputType(MINTYPEOFGAME, MAXTYPEOFGAME);
 
