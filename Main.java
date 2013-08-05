@@ -6,6 +6,8 @@ public class Main {
 
 	private static final byte MINSIZEOFARR = 3;
 	
+	private static final byte DEFSIZEOFARR = 3;
+	
 	private final static byte CLEARARRBYZERO = 0;
 	
 	private static byte MINTYPEOFGAME = 1;
@@ -22,7 +24,7 @@ public class Main {
 
 		Dialog gameDialog = new Dialog();
 
-		Field gameField = new Field(Dialog.getFromConsoleSizeOfArr(MINSIZEOFARR, MAXSIZEOFARR));
+		Field gameField = new Field(Dialog.getFromConsoleSizeOfArr(MINSIZEOFARR, MAXSIZEOFARR, DEFSIZEOFARR));
 
 		inputType = gameDialog.getFromConsoleInputType(MINTYPEOFGAME, MAXTYPEOFGAME);
 
@@ -34,8 +36,6 @@ public class Main {
 
 			if ((e % 2) == 0) {
 				
-				valueForField = 1;
-				
 				if (inputType == 1) {
 				
 					arr = gameField.getFieldFromRandom();
@@ -44,7 +44,7 @@ public class Main {
 				
 				if (inputType == 2) {
 					
-					arr = gameField.getFieldForWin(valueForField);
+					arr = gameField.getFieldFromRandom();
 					
 				}
 				
@@ -54,9 +54,9 @@ public class Main {
 					
 				}
 				
-			} else {
+				valueForField = 1;
 				
-				valueForField = -1;
+			} else {
 				
 				if (inputType == 1) {
 					
@@ -75,6 +75,9 @@ public class Main {
 					arr = Dialog.getFieldFromConsole(gameField.getSizeOfArr());
 					
 				}
+				
+				
+				valueForField = -1;
 				
 			}
 
@@ -91,8 +94,6 @@ public class Main {
 			}
 
 		}
-		
-		System.out.println("\nNo winer");
 
 	}
 
