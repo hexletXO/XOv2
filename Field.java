@@ -142,16 +142,24 @@ public class Field {
 	
 	public byte[] getFieldForWin(byte vuln) {
 		byte[] arr = new byte[2];
-		for (byte i = 1; i < sizeOfArr; i++) {
-			for (byte j = 1; j < sizeOfArr; j++) {
+		byte reverseVuln = -1;
+		for (byte i = 0; i < sizeOfArr; i++) {
+			for (byte j = 0; j < sizeOfArr; j++) {
 				if (checkFieldForWin(i,j,vuln) == true) {
 					arr[0] = i;
 					arr[1] = j;
 					return arr;
+				} else {
+					if (checkFieldForWin(i,j,(byte) (vuln * reverseVuln)) == true) {
+						arr[0] = i;
+						arr[1] = j;
+						return arr;
+					}
 				}
 			}
 		}
-		return arr;
+		
+		return getFieldFromRandom();
 	}
 	
 }
